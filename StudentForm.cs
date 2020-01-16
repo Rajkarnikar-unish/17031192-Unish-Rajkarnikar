@@ -159,13 +159,13 @@ namespace CourseWork
         {
             Student student = new Student();
             List<Student> studentList = student.List();
-            if (sortingCB.SelectedItem.ToString().Equals("Name(Ascending)"))
+            if (sortingCB.SelectedItem.ToString().Equals("Name (A-Z)"))
             {
                 List<Student> list = student.sortByAscendingFName(studentList);
                 DataTable dt = Utility.ConvertToDataTable(list);
                 dataGridStudents.DataSource = dt;
             }
-            else if(sortingCB.SelectedItem.ToString().Equals("Name(Descending)"))
+            else if(sortingCB.SelectedItem.ToString().Equals("Name (Z-A)"))
             {
                 List<Student> list = student.sortByDescendingFName(studentList);
                 DataTable dt = Utility.ConvertToDataTable(list);

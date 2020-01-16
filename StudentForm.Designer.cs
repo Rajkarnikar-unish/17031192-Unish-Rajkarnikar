@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.FirstNameLbl = new System.Windows.Forms.Label();
             this.LastNameLbl = new System.Windows.Forms.Label();
             this.LastNameTb = new System.Windows.Forms.TextBox();
@@ -55,6 +55,8 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.IdTb = new System.Windows.Forms.TextBox();
             this.dataGridStudents = new System.Windows.Forms.DataGridView();
+            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.GenderCb = new System.Windows.Forms.ComboBox();
             this.FirstNameTb = new System.Windows.Forms.TextBox();
             this.ProgramChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -63,8 +65,6 @@
             this.WeeklyReportLbl = new System.Windows.Forms.Label();
             this.WeeklyRptPicker = new System.Windows.Forms.DateTimePicker();
             this.WeeklyDateLbl = new System.Windows.Forms.Label();
-            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Program = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelStudent.SuspendLayout();
@@ -243,8 +243,8 @@
             // 
             this.sortingCB.FormattingEnabled = true;
             this.sortingCB.Items.AddRange(new object[] {
-            "Name (Ascending)",
-            "Name (Descending)",
+            "Name (A-Z)",
+            "Name (Z-A)",
             "Registered Date (Ascending)",
             "Registered Date (Descending)"});
             this.sortingCB.Location = new System.Drawing.Point(466, 584);
@@ -339,6 +339,22 @@
             this.dataGridStudents.TabIndex = 13;
             this.dataGridStudents.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridStudents_CellContentClick);
             // 
+            // Edit
+            // 
+            this.Edit.HeaderText = "Edit";
+            this.Edit.MinimumWidth = 8;
+            this.Edit.Name = "Edit";
+            this.Edit.Text = "Edit";
+            this.Edit.UseColumnTextForButtonValue = true;
+            this.Edit.Width = 90;
+            // 
+            // Delete
+            // 
+            this.Delete.HeaderText = "Delete";
+            this.Delete.MinimumWidth = 8;
+            this.Delete.Name = "Delete";
+            this.Delete.Width = 90;
+            // 
             // GenderCb
             // 
             this.GenderCb.FormattingEnabled = true;
@@ -362,17 +378,17 @@
             // 
             // ProgramChart
             // 
-            chartArea3.Name = "ChartArea1";
-            this.ProgramChart.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.ProgramChart.Legends.Add(legend3);
+            chartArea5.Name = "ChartArea1";
+            this.ProgramChart.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.ProgramChart.Legends.Add(legend5);
             this.ProgramChart.Location = new System.Drawing.Point(836, 14);
             this.ProgramChart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ProgramChart.Name = "ProgramChart";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.ProgramChart.Series.Add(series3);
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.ProgramChart.Series.Add(series5);
             this.ProgramChart.Size = new System.Drawing.Size(338, 344);
             this.ProgramChart.TabIndex = 16;
             this.ProgramChart.Text = "chart1";
@@ -427,35 +443,18 @@
             this.WeeklyDateLbl.TabIndex = 21;
             this.WeeklyDateLbl.Text = "Select Date:";
             // 
-            // Edit
-            // 
-            this.Edit.HeaderText = "Edit";
-            this.Edit.MinimumWidth = 8;
-            this.Edit.Name = "Edit";
-            this.Edit.Text = "Edit";
-            this.Edit.UseColumnTextForButtonValue = true;
-            this.Edit.Width = 90;
-            // 
-            // Delete
-            // 
-            this.Delete.HeaderText = "Delete";
-            this.Delete.MinimumWidth = 8;
-            this.Delete.Name = "Delete";
-            this.Delete.Width = 90;
-            // 
             // Program
             // 
             this.Program.HeaderText = "Programs";
             this.Program.MinimumWidth = 8;
             this.Program.Name = "Program";
-            this.Program.Width = 150;
             // 
             // Number
             // 
             this.Number.HeaderText = "Total";
             this.Number.MinimumWidth = 8;
             this.Number.Name = "Number";
-            this.Number.Width = 150;
+            this.Number.Width = 80;
             // 
             // StudentForm
             // 
